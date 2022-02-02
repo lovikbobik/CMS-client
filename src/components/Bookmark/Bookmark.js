@@ -11,16 +11,16 @@ function Bookmark() {
     const [post, setPost] = useState([])
     const {userId} = useContext(AuthContext)
 
-    const fetchData = async () => {
-        const response = await request('https://twitter-ser.herokuapp.com/posts/bookmarks', 'POST', {userId});
-        setPost(response);
-    }
-
-    useEffect(() =>
-            fetchData(), [setPost]);
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await request('https://twitter-ser.herokuapp.com/posts/bookmarks', 'POST', {userId});
+            setPost(response);
+        };
+        fetchData();
+    }, [setPost]);
 
     return (
-        <Layout active={true}>
+        <Layout  active={true}>
             <div className="main">
                 <div className="main__header">
                     <h2>Главная </h2>
@@ -28,7 +28,7 @@ function Bookmark() {
                 </div>
                 {post.length > 0 ? post.slice(0).reverse().map(items => (
                     <Post post={items.post}/>
-                )) : <h1 className={'header-tweet'}>Здесь пока нет никаких закладок</h1>}
+                )): <h1 className={'header-tweet'}>Здесь пока нет никаких закладок</h1>}
             </div>
         </Layout>
     )
