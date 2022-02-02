@@ -1,0 +1,50 @@
+.actual {
+    flex: 0.3;
+}
+
+.actual__recommend {
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.actual__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.actual__header > h2{
+    font-weight: 800;
+}
+
+
+.actual__settings{
+    position: relative;
+    font-size: 20px;
+    padding: 10px;
+    right: 10px;
+}
+
+.actual__settings:hover{
+    background-color: #e6e6e6;
+    border-radius: 50px;
+    transition: background-color 200ms ease-out;
+}
+
+.actual__recommend > p{
+    color: var(--twitter-color);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+
+.actual__recommend > p:hover{
+    background-color: #e6e6e6;
+    transition: background-color 200ms ease-out;
+}

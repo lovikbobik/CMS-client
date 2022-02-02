@@ -1,0 +1,22 @@
+.registration{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 10px 35% 0 35%;
+    justify-content: space-around;
+    border: 1px solid var(--twitter-color);
+    border-radius: 50px;
+    align-items: center;
+    padding: 20px;
+}
+
+.registration__pass{
+    height: 30px;
+    width: 350px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--twitter-color);
+    border-radius: 50px;
+    text-align:center;
+    padding: 15px;
+}

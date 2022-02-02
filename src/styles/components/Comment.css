@@ -1,0 +1,19 @@
+.comment{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border:  #e6e6e6 1px solid;
+}
+
+.comment__header{
+    display: flex;
+    flex-direction: row;
+    border-bottom:  #e6e6e6 1px solid;
+}
+.comment__body{
+}
+.comment__footer{
+    display: flex;
+    justify-content: space-between;
+
+}

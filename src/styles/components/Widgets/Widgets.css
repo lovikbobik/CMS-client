@@ -1,0 +1,21 @@
+.widget__container {
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.widget__container > h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0;
+}
+
+.widget__content{
+    margin-left: 10px;
+    padding: 20px;
+}

@@ -1,0 +1,39 @@
+.actualDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actualDetails:hover{
+    background-color: #e6e6e6;
+    transition: background-color 200ms ease-out;
+}
+
+.actualDetails__recommends{
+    flex-direction: column;
+    padding: 10px;
+}
+
+.actualDetails__txt{
+    color:gray;
+    font-size: 11px;
+}
+.actualDetails__tag{
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.actualDetails__more{
+    position: relative;
+    right: 10px;
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+.actualDetails__more:hover{
+    background-color: #cdd7ea;
+    color: var(--twitter-color);
+    border-radius: 50px;
+    transition: background-color 200ms ease-out;
+}

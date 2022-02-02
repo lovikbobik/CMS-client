@@ -1,0 +1,51 @@
+.followDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /*margin-bottom: 16px;*/
+    /*padding: 5px;*/
+}
+
+.textGray{
+    color: gray;
+}
+
+.followDetails__info{
+    margin-left: 15px;
+}
+
+.followDetails__username{
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.follow__badge{
+    font-size: 15px !important;
+    color: var(--twitter-color);
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.followDetails__textWeight{
+    font-weight: 600;
+    margin: 0;
+}
+
+.followDetails__info > p{
+    margin: 0;
+}
+
+.followDetails__button {
+    background-color: black !important;
+    color: white !important;
+    font-weight: 750 !important;
+    border: none !important;
+    border-radius: 30px !important;
+    width: 110px;
+    height: 40px !important;
+    text-transform: inherit !important;
+    margin-top: 10px !important;
+    margin-left: auto !important;
+}

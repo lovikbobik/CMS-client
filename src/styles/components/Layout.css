@@ -1,0 +1,14 @@
+.layout {
+    flex: 0.6;
+    border-right: 1px solid #e6e6e6;
+    overflow-y: scroll;
+}
+
+.layout::-webkit-scrollbar {
+    display: none;
+}
+
+.layout {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

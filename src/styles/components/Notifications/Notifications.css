@@ -1,0 +1,48 @@
+.notification__header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-top:1px solid #E8E8E8;
+    padding: 1px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification__headerButtons{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #E8E8E8;
+    padding: 20px 50px;
+
+}
+
+.notification__navLink{
+    padding: 20px 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 550;
+    color: gray;
+}
+
+.notification__navLink:hover{
+    color: var(--twitter-color) !important;
+    transition: background-color 0.5s;
+}
+
+.notification__content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+}
+
+.notification__content > h1{
+    font-weight: 1000;
+    font-size: 40px;
+}
+
+.notification__content > p{
+    color: gray;
+}

@@ -1,0 +1,42 @@
+.explore{
+    display: flex;
+    flex-direction: column;
+    min-width: 680px;
+    max-width: 680px;
+}
+.explore__header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+
+.explore__recommend{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.explore__recommend > h2{
+    padding-left: 10px;
+    font-weight: 800;
+}
+
+.explore__moreIcon{
+    position: relative;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.explore__moreIcon:hover {
+    background-color: #dcf1fa;
+    color: var(--twitter-color);
+    border-radius: 50px;
+    transition: background-color 200ms ease-out;
+}
+
+.exploreRecIcon{
+    color: var(--twitter-color);
+}

@@ -1,0 +1,12 @@
+.loginPage__header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login__icon{
+    color: var(--twitter-color);
+    font-size: 50px !important;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
