@@ -28,6 +28,7 @@ function Profile({
         setUser(response);
     }
     useEffect(() => fetchData(), [setUser]);
+
     const account = useContext(AuthContext)
     const [name, setName] = useState({})
     const getName = async () => {
