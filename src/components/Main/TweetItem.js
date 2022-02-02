@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import {useFetch} from "../../Hook/useFetch.hook";
 import axios from "axios";
 import Post from "../Post/Post";
 import Layout from "../Layout";
@@ -30,17 +29,15 @@ function TweetItem() {
         }
     }
 
-    useEffect(() => {
-        const getPost = async () => {
-            try {
-                const response = await axios(`https://twitter-ser.herokuapp.com/posts/${params.id}`)
-                setPost(response.data)
-                setComments(response.data.comments)
-            } catch (e) {
-            }
+    const getPost = async () => {
+        try {
+            const response = await axios(`https://twitter-ser.herokuapp.com/posts/${params.id}`)
+            setPost(response.data)
+            setComments(response.data.comments)
+        } catch (e) {
         }
-        getPost();
-    }, [setPost, setComments])
+    }
+    useEffect(() => getPost(), [setPost, setComments])
     return (
         <Layout>
             <div className="main__header">

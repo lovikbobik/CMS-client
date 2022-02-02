@@ -44,9 +44,6 @@ function Login() {
                     value={form.password}
                     onChange={changeHandler}/>
             </div>
-            <div>
-                <a href="#" className="login__question">Забыли пароль?</a>
-            </div>
             <Button  onClick={loginHandler} type="submit" className="loginButton">Войти</Button>
         </div>
     )

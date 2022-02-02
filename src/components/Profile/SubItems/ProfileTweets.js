@@ -1,6 +1,4 @@
 import React, {useContext, useEffect, useState} from "react";
-import PostDefault from "../../Post/PostDefault";
-import mainPostElements from "../../../Arrays/mainPostElements";
 import {useFetch} from "../../../Hook/useFetch.hook";
 import {AuthContext} from "../../Auth/AuthContext";
 import Post from "../../Post/Post";

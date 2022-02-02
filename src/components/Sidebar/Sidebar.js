@@ -19,7 +19,7 @@ import {AuthContext} from "../Auth/AuthContext";
 import {useFetch} from "../../Hook/useFetch.hook";
 
 function Sidebar() {
-    const [Modal, open, close, isOpen] = useModal('root', {
+    const [Modal, open, close] = useModal('root', {
         preventScroll: true,
         closeOnOverlayClick: false
     });
@@ -34,15 +34,11 @@ function Sidebar() {
     const {request} = useFetch()
     const account = useContext(AuthContext)
     const [name, setName] = useState({})
-
-    useEffect(() => {
-        const getName = async () => {
-            const response = await request(`https://twitter-ser.herokuapp.com/auth/${account.userId}`)
-            setName(response)
-        }
-        getName()
-
-    }, [setName])
+    const getName = async () => {
+        const response = await request(`https://twitter-ser.herokuapp.com/auth/${account.userId}`)
+        setName(response)
+    }
+    useEffect(() => getName(), [setName])
 
     return (
         <div className="sidebar">

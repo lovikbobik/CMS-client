@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from "react";
 import '../../styles/components/Profile/Profile.css';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {Avatar, Button} from "@material-ui/core";
-import VerifiedIcon from "@mui/icons-material/Verified";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined';
 import LinkOutlinedIcon from '@mui/icons-material/LinkOutlined';
@@ -24,23 +23,19 @@ function Profile({
     const {request} = useFetch()
     const [user, setUser] = useState([])
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await request('https://twitter-ser.herokuapp.com/users');
-            setUser(response);
-        };
-        fetchData();
-    }, [setUser]);
+    const fetchData = async () => {
+        const response = await request('https://twitter-ser.herokuapp.com/users');
+        setUser(response);
+    }
+    useEffect(() => fetchData(), [setUser]);
     const account = useContext(AuthContext)
     const [name, setName] = useState({})
-    useEffect(() => {
-        const getName = async () => {
-            const response = await request(`https://twitter-ser.herokuapp.com/auth/${account.userId}`)
-            setName(response)
-        }
-        getName()
+    const getName = async () => {
+        const response = await request(`https://twitter-ser.herokuapp.com/auth/${account.userId}`)
+        setName(response)
+    }
+    useEffect(() => getName(), [setName])
 
-    }, [setName])
     return (
         <div className="profile">
 
@@ -54,7 +49,8 @@ function Profile({
 
             <div>
                 <img className="profile__background"
-                     src={poster}/>
+                     src={poster}
+                alt={'back'}/>
             </div>
 
             <div className="profile__follow">
@@ -112,7 +108,7 @@ function Profile({
                             }
                         )}
                     </div>
-                    <a className="profile__widgetMore" href="#">Показать еще</a>
+                    <p className="profile__widgetMore">Показать еще</p>
                 </div>
             </div>
         </div>

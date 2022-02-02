@@ -9,7 +9,7 @@ function StartPage() {
         <div>
             <div className="start">
                 <div className="start__img">
-                    <img src="https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png"/>
+                    <img src="https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png" alt={"картинка"}/>
                 </div>
                 <div>
                     <div className="start__info">

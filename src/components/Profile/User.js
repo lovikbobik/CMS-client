@@ -24,7 +24,8 @@ function User() {
 
             <div>
                 <img className="profile__background"
-                     src="https://sun9-37.userapi.com/c637122/v637122263/2589f/Cat6cVGDrvU.jpg"/>
+                     src="https://sun9-37.userapi.com/c637122/v637122263/2589f/Cat6cVGDrvU.jpg"
+                alt={'back'}/>
             </div>
 
             <div className="profile__follow">

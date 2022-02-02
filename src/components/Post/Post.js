@@ -17,16 +17,14 @@ function Post({post}) {
     const [comments, setComments] = useState([])
     const {userId} = useContext(AuthContext)
 
-    useEffect(() => {
-        const getPost = async () => {
-            try {
-                const response = await axios(`https://twitter-ser.herokuapp.com/posts/${post._id}`)
-                setComments(response.data.comments)
-            } catch (e) {
-            }
+    const getPost = async () => {
+        try {
+            const response = await axios(`https://twitter-ser.herokuapp.com/posts/${post._id}`)
+            setComments(response.data.comments)
+        } catch (e) {
         }
-        getPost();
-    }, [setComments])
+    }
+    useEffect(() => getPost(), [setComments])
 
     const addToBookmark = async()=>{
         try{

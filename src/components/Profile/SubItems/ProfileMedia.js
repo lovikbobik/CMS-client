@@ -1,7 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
-import {useFetch} from "../../../Hook/useFetch.hook";
-import {AuthContext} from "../../Auth/AuthContext";
-import Post from "../../Post/Post";
+import React from "react";
 
 
 function ProfileReplies() {

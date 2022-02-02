@@ -9,13 +9,13 @@ function Main() {
     const {request} = useFetch()
     const[post,setPost]=useState([])
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await request('https://twitter-ser.herokuapp.com/posts');
-            setPost(response);
-        };
-        fetchData();
-    }, [setPost]);
+    const fetchData = async () => {
+        const response = await request('https://twitter-ser.herokuapp.com/posts');
+        setPost(response);
+    }
+
+    useEffect(() =>
+        fetchData(), [setPost]);
 
     return (
             <div className="main">

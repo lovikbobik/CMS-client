@@ -23,7 +23,7 @@ function Search() {
             setCount(form.text.length)
         } catch (e) {
         }
-    })
+    }, [setPost])
 
     return (
         <div className="search">
