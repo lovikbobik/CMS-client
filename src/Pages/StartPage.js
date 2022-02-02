@@ -44,7 +44,6 @@ function StartPage() {
                     <li>Маркетинг</li>
                     <li>Твиттер для бизнеса</li>
                     <li>Разработчикам</li>
-                    <li>Каталог</li>
                     <li>Настройки</li>
                     <li>©Twitter, Inc., 2021.</li>
                 </ul>
