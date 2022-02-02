@@ -36,7 +36,7 @@ function Search() {
                        onChange={changeHandler}
                        placeholder="Поиск в Твиттере"/>
             </div>
-            {  form.length > 0 ? form.map((posts) => {
+            {  post.length > 0 ? post.map((posts) => {
                     return (
                         <Post post={posts}/>
                     )
